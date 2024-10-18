@@ -1,0 +1,100 @@
+body {
+ background-color: hsl(210, 46%, 95%);
+ font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+h1 {
+ font-size: 13px;
+ font-weight: 600;
+}
+
+.ml50 {
+margin-left: 50px;
+}
+
+strong {
+ font-size: 19px;
+ font-weight: 500;
+
+}
+
+article {
+ padding: 30px;
+ border-radius: 12px;
+}
+
+article.quotes {
+background-image: url(images/bg-pattern-quotation.svg);
+background-repeat: no-repeat;
+background-position-x: 327px;
+background-position-y: 0px;
+}
+
+.grid-item1 {
+ grid-area: a;
+ background-color: hsl(263, 55%, 52%);
+ color: hsl(210, 46%, 95%);
+ }
+ 
+ .grid-item2 {
+  grid-area: b;
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(210, 46%, 95%);
+ }
+ 
+ .grid-item3 {
+  grid-area: c;
+  background-color: hsl(0, 0%, 100%);
+ }
+ 
+ .grid-item4 {
+  grid-area: d;
+  background-color: hsl(219, 29%, 14%);
+color: hsl(210, 46%, 95%);;
+ }
+ 
+ .grid-item5 {
+  grid-area: e;
+  background-color: hsl(0, 0%, 100%);
+ }
+
+ .grid-container {
+  display: grid;
+  grid-template-areas: 
+  'a a b e'
+  'c d d e';
+  gap: 30px;
+ }
+ 
+.attribution { 
+ font-size: 11px; text-align: center;
+ margin-top: 3rem; 
+}
+
+.attribution a { 
+ color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 1400px) {
+  .grid-container {
+    width: 90%;
+    margin-top: 5%;
+  }
+  
+}
+
+@media screen and (max-width:1000px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  article.quotes {
+    background-position-x: 227px;
+  }
+  
+}
